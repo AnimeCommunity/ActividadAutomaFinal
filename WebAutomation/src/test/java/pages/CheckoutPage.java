@@ -20,6 +20,9 @@ public class CheckoutPage {
     @FindBy(id = "continue")
     WebElement continueButton;
 
+    @FindBy(className = "title")
+    WebElement checkoutTitle;
+
     public CheckoutPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -30,5 +33,9 @@ public class CheckoutPage {
         lastName.sendKeys(last);
         zipCode.sendKeys(zip);
         continueButton.click();
+    }
+
+    public boolean isOnCheckoutPage() {
+        return checkoutTitle.getText().equals("Checkout: Your Information");
     }
 }

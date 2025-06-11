@@ -1,17 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.676 s <<< FAILURE! - in TestSuite
-testCompletePurchaseFlow(tests.PurchaseTest)  Time elapsed: 0.59 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"#checkout"}
-  (Session info: chrome=137.0.7151.69)
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 19.053 s <<< FAILURE! - in TestSuite
+testCompletePurchaseFlow(tests.PurchaseTest)  Time elapsed: 1.096 s  <<< FAILURE!
+java.lang.AssertionError: Purchase confirmation failed expected [true] but found [false]
+	at tests.PurchaseTest.testCompletePurchaseFlow(PurchaseTest.java:32)
+
+testRemovingItemsFromCart(tests.RemoveItemsTest)  Time elapsed: 10.677 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: checkout (tried for 10 second(s) with 500 milliseconds interval)
+	at tests.RemoveItemsTest.testRemovingItemsFromCart(RemoveItemsTest.java:15)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.id: checkout
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'ANI', ip: '192.168.56.1', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\dansa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51566}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e886d5f490533137bc6be071cb561695
-*** Element info: {Using=id, value=checkout}
-	at tests.PurchaseTest.testCompletePurchaseFlow(PurchaseTest.java:18)
+Driver info: driver.version: unknown
+	at tests.RemoveItemsTest.testRemovingItemsFromCart(RemoveItemsTest.java:15)
 

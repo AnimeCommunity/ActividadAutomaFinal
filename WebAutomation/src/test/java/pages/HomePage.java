@@ -9,6 +9,10 @@ import org.openqa.selenium.By;
 import java.util.List;
 import java.util.Random;
 
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
 public class HomePage {
     WebDriver driver;
 
@@ -43,6 +47,8 @@ public class HomePage {
 
     public void goToCart() {
         cartButton.click();
+
+        new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("checkout")));
     }
 
     public void logout() {
