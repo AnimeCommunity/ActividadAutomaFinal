@@ -1,0 +1,12 @@
+utils\WebDriverFactory.class
+pages\LoginPage.class
+tests\PurchaseTest.class
+pages\CartPage.class
+pages\HomePage.class
+com\globant\AppTest.class
+base\BaseTest.class
+tests\LogoutTest.class
+tests\RemoveItemsTest.class
+pages\CheckoutCompletePage.class
+pages\CheckoutPage.class
+pages\CheckoutOverviewPage.class
